@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Abhishek">
+    <meta name="description" content="This is about all things I am learning HTML code ">
+    <title>My First Webpage</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+
+  <body>
+    <article id="contact">
+      <h2>Contact Me</h2>
+      <p>I'm really want to talk 2 you</p>
+
+      <form action="https://httpbin.org/get" method="get">
+
+        <fieldset><!--It will create a box around inner content-->
+          <legend>Personal Info</legend>
+        <p>
+          <label for="firstName">First name</label>
+        <!-- label for attribute value must be same to the id value of input tag -->
+          <input type="text" name="firstName" id="firstName" placeholder="Girdhari" autocomplete="on" required autofocus>
+        </p>
+
+        <p>
+          <label for="lastName">Last name</label>
+          <input type="text" name="lastName" id="lastName" placeholder="D'suza" autocomplete="on" required >
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="abc@gamil.com" required >
+        </p>
+        <p>
+          <label for="password">password</label>
+          <input type="password" name="password" id="password" placeholder="Your secret" required >
+        </p>
+
+        <p>
+          <label for="phone">Phone</label>
+          <input type="tel" name="phone" id="phone" placeholder="111-111-1111" autocomplete="on" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </p>
+        <p>
+          <label for="decade">Favorite decade</label>
+          <input type="number" name="decade" id="decade" 
+          value="2000" min="1976" max="2030" step="5">
+          <!--so here step="10" mean when u click on arrow available in box to up/ down number it increase / decrease by 5 years at once-->
+        </p>
+        <p>
+          <label for="coffee">Favorite Coffee</label>
+          <select name="coffee" id="coffee" multiple size="6"><!-- Here multiple means u can selected more than 1 option of coffee by using Ctrl+ leftClick-->
+                                                              <!--Size = "6" mean dropdown will show u option at once in a window-->
+          <optgroup label="Coffee">
+            <option value="regular coffee">Regular Coffee</option>
+            <option value="Iced Coffee">Iced Coffee</option>
+          </optgroup >
+          <optgroup label="Espresso Drinks">
+            <option value="cappuccino ">Cappuccino </option>
+            <option value="latte">Latte</option>
+            <option value="other" >Other</option>
+            <option value="americano" selected>Americano</option>
+          </optgroup>
+            <option value="cortado">Cortado</option>
+          </select>
+        </p>
+        <!--  We can create dropdown this way also 
+          <p>
+          <label for="coffee">Favorite Coffee</label>
+          <input type="text" name="coffee" id="coffee" list="coffee-list">
+
+          <datalist id="coffee-list">
+            <option value="regular coffee"></option>
+            <option value="Iced Coffee"></option> 
+            <option value="cappuccino "></option>
+            <option value="latte"></option>
+            <option value="other" ></option>
+            <option value="americano"></option>
+            <option value="cortado"></option>
+          </datalist>  
+
+        </p> -->
+
+      </fieldset>
+<br><!--to get more space bw both fieldset-->
+      <fieldset>
+        <legend>What is your Favorite food</legend>
+        <p>
+          <input type="radio" name="food" id="pizza" value="pizza">
+          <label for="pizza">Pizza</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="burger" value="burger">
+          <label for="burger">Burger</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="tacos" value="tacos">
+          <label for="tacos">Tacos</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="dosa" value="dosa">
+          <label for="dosa">Dosa</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="alootikki" value="alootikki">
+          <label for="alootikki">Aloo-tikki</label>
+        </p>
+      </fieldset>
+      <br>
+
+      <fieldset>
+        <legend>Pets</legend>
+        <p>
+          <input type="checkbox" name="pets" id="dog" value="dog">
+          <label for="dog">Dog</label>
+        </p>
+        <p>
+          <input type="checkbox" name="pets" id="fish" value="fish">
+          <label for="fish">Fish</label>
+        </p>
+        <p>
+          <input type="checkbox" name="pets" id="hen" value="hen">
+          <label for="hen">Hen</label>
+        </p>
+        <p>
+          <input type="checkbox" name="pets" id="frog" value="frog">
+          <label for="frog">Frog</label>
+        </p>
+        <p>
+          <input type="checkbox" name="pets" id="cat" value="cat">
+          <label for="cat">Cat</label>
+        </p>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Send me a Note</legend>
+        <label for="message">Your Note</label>
+        <br> <br><!--because <label> & textarea tags are inline tags-->
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Leave your note here"></textarea>
+      </fieldset>
+
+        <button type="submit"> Submit</button><!--onclick here formInput will send to action="address" <-this address -->
+        <button type="submit" formaction="https:httpbin.org/post" formmethod="post"> Post</button><!--this will allow us to submit our form with "POSt"-->
+        <button type="reset"> Reset</button>
+      </form>
+
+    </article>
+  </body>
+
+</html>
