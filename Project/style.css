@@ -1,0 +1,16 @@
+html{
+  font-size: 20px;
+}
+body{
+  color:rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+table,th,td, caption
+{
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(227, 227, 227);
+}
+
